@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/restList_toolbar"
+        android:theme="@style/ToolbarTheme"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/restList_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restList_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.997"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/no_restaurant_tv"
+        android:layout_width="0dp"
+        android:layout_height="315dp"
+        app:layout_constraintLeft_toLeftOf="@+id/restList_recyclerView"
+        app:layout_constraintRight_toRightOf="@+id/restList_recyclerView"
+        app:layout_constraintBottom_toBottomOf="@+id/restList_recyclerView"
+        app:layout_constraintTop_toTopOf="@+id/restList_recyclerView"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="No Restaurant Found"
+        app:layout_constraintHorizontal_bias="0.504"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="visible"
+        tools:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintVertical_bias="0.982" />
+
+
+</android.support.constraint.ConstraintLayout>
